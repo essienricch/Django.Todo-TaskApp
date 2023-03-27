@@ -1,0 +1,45 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Home</title>#}
+{#</head>#}
+{#<body style="margin: 0">#}
+{#    <header style="background-color: #5b80b2;#}
+{#    text-align: center; display:block;#}
+{#    width: content-box;#}
+{#    margin: 0 0 20px;#}
+{#    position: relative;#}
+{#    bottom: 23px;#}
+{#    height: 80px; text-transform: uppercase">#}
+{#         <h1 style="background-color: #00363a; color: ghostwhite;#}
+{#         position: relative;#}
+{#         top: 38px;#}
+{#         border-radius: 6px;#}
+{#         font-family: 'Berlin Sans FB',sans-serif;#}
+{#         border: 1px solid transparent; width: 200px">Todo App</h1>#}
+{#        <nav><a href="{% url 'test' %}" >Log Out</a></nav>#}
+{#    </header>#}
+{#</body>#}
+{#</html>#}
+
+{% extends 'todo/base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+ {% block content %}
+     <div style="background-color: #1b1b1b; padding: 50px; width: 800px; position:relative; left: 220px; top: 80px; border-radius: 10px; box-shadow: black">
+     <p style="color: white; font-size: 25px">Introducing the ultimate task app.
+         The solution for managing your busy life!
+         Our task app is designed to help you stay organized,
+         prioritize your to-do list, and achieve your goals,
+         all in one easy-to-use platform.</p>
+     </div>
+{#     <div style="position:absolute; background-color: #bbccdd; bottom: 40px; margin: 10px; padding: 5px; height: 50px; border-radius: 5px">#}
+{#         <p style="color: black; font-weight: bold; padding: 5px;"><a href="" style="text-decoration: none; color: #212121">Contact us</a></p>#}
+{#     </div>#}
+
+
+ {% endblock %}

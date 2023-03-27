@@ -1,0 +1,11 @@
+asgiref==3.6.0
+Django==4.1.7
+sqlparse==0.4.3
+tzdata==2022.7
+
+pip~=23.0.1
+wheel~=0.38.4
+setuptools~=60.2.0
+platformdirs~=3.1.1
+environ~=1.0
+python-dotenv~=1.0.0

@@ -1,0 +1,18 @@
+{% extends 'todo/base_view.html' %}
+
+{% block title %}
+   Update
+{% endblock %}
+
+{% block content %}
+<div style="background-color: #6f94c6; border: 2px solid black; margin: 20px; padding: 20px; width: 50%">
+
+<form action="" method="post">
+    {% csrf_token %}
+   {{ form.as_p }}
+    <input type="submit" value="UPDATE" style="background-color: #1b1b1b; color: white; padding: 5px">
+</form>
+
+</div>
+
+{% endblock %}

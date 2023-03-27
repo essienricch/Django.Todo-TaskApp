@@ -1,0 +1,18 @@
+{% extends 'todo/base_view.html' %}
+
+{% block title %}
+   {{ task.title }}
+{% endblock %}
+
+{% block content %}
+<div style="background-color: slateblue; border: 2px solid black;border-radius: 10px; margin: 100px; padding:50px;width: 500px; height: 350px;text-align: center">
+<h3 style="margin-bottom: 20px; text-decoration: underline">{{ task.title.upper }}</h3>
+<h5 style="margin: 20px">Description-> {{ task.description }}</h5>
+    <p>Due-Date --> {{ task.due_date }}</p>
+<p style="margin-bottom:50px">Task Status --> <span style="margin-left: 10px; background-color: #121212; color: #bbccdd; padding: 10px; border-radius: 3px;">{{ task.task_status }}</span></p>
+    <a href="{% url 'todo:update' task.pk %}" style="margin-right: 25px; text-decoration:none; background-color: #006b1b; width: 30%; padding: 5px; color: white;border-radius: 5px; display: inline-block">UPDATE </a>
+    <a href="{% url 'todo:delete' task.pk %}" style="display: inline-block; margin-left:70px;background-color: #570808; text-decoration:none;padding: 5px; width: 30%; color: white; border-radius: 5px;">DELETE</a>
+
+</div>
+
+{% endblock %}

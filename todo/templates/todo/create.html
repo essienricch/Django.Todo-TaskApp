@@ -1,0 +1,15 @@
+{% extends 'todo/base_view.html' %}
+
+{% block title %}
+   Create Task
+{% endblock %}
+
+{% block content %}
+    <div style="margin: 30px; background-color: mediumpurple; height: 100%; width: 50%; padding: 20px">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="SAVE" style="background-color: #272727; color: honeydew;border-radius: 5px; padding: 5px">
+        </form>
+    </div>
+{% endblock %}

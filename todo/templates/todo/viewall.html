@@ -1,0 +1,28 @@
+{% extends 'todo/base_view.html' %}
+
+{% block title %}
+   Tasks
+{% endblock %}
+
+{% block content %}
+    <main style="margin: 10px">
+   <div>
+       {% for task in tasks %}
+       <ul >
+           <li style="margin: 30px">
+              <h3><a href="{% url 'todo:detail' task.pk  %}" style="text-decoration: none; color: white">{{ task.title.title }}</a></h3>
+             <span style="background-color: black;
+              color: white; display: inline-block;
+               border: 1px solid transparent; padding: 10px; border-radius: 5px">Due-Date =>
+                &nbsp {{ task.due_date }}</span>
+               <small style="display: inline-block;
+                position: relative; left: 200px;
+                bottom: 25px; background-color: #447e9b;
+                padding: 10px; border-radius: 5px">{{ task.task_status }}</small>
+           </li>
+       </ul>
+       {% endfor %}
+    </div>
+    </main>
+
+{% endblock %}

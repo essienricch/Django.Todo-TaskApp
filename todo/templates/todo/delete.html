@@ -1,0 +1,18 @@
+{% extends 'todo/base_view.html' %}
+
+{% block title %}
+   {{ task.title }}
+{% endblock %}
+
+
+{% block content %}
+<div style="background-color: #aaaaaa; margin: 30px; padding: 30px; width: 40%">
+    <form action="" method="post">
+    {% csrf_token %}
+   {{ form.as_p }}
+        <p style="font-weight: bolder; text-transform: uppercase; margin: 0 0 40px 60px"> {{ task.title }}</p>
+    <input type="submit" value="DELETE">
+        <a href="{% url 'todo:detail' task.pk %}" style="margin-left: 50px; background-color: #264b5d; padding: 5px; font-size: small; color: white; text-decoration: none; border-radius: 5px">CANCEL</a>
+</form>
+</div>
+{% endblock %}
